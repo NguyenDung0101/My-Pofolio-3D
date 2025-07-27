@@ -34,8 +34,6 @@ const Index = ({ language, theme }: IndexProps) => {
         <ExperienceSection language={language} />
         <ProjectsSection language={language} />
         <ContactSection language={language} />
-      </div>
-      <div className="" style={{ position: "relative", zIndex: 100 }}>
         <Footer language={language} />
       </div>
     </div>

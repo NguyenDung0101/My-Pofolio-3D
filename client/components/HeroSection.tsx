@@ -98,7 +98,7 @@ const HeroSection = ({ language }: HeroSectionProps) => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/30 mt-9">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background  to-muted/30 mt-9">
       {/* Background Elements */}
       {/* <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-r from-gradient-from/20 to-gradient-to/20 rounded-full blur-3xl animate-float" />
@@ -107,6 +107,7 @@ const HeroSection = ({ language }: HeroSectionProps) => {
           style={{ animationDelay: "2s" }}
         />
       </div> */}
+      <div></div>
 
       <div className="container-custom relative z-10">
         <motion.div
