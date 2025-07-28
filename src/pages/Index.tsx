@@ -19,16 +19,17 @@ const Index = ({ language, theme }: IndexProps) => {
     if (theme === "light") {
       const script = document.createElement("script");
       script.type = "module";
-      script.src = "https://unpkg.com/@splinetool/viewer@1.10.37/build/spline-viewer.js";
-      
+      script.src =
+        "https://unpkg.com/@splinetool/viewer@1.10.37/build/spline-viewer.js";
+
       // Check if script is already loaded
       const existingScript = document.querySelector(
-        'script[src="https://unpkg.com/@splinetool/viewer@1.10.37/build/spline-viewer.js"]'
+        'script[src="https://unpkg.com/@splinetool/viewer@1.10.37/build/spline-viewer.js"]',
       );
-      
+
       if (!existingScript) {
         document.head.appendChild(script);
-        
+
         return () => {
           if (script.parentNode) {
             script.parentNode.removeChild(script);
@@ -42,7 +43,7 @@ const Index = ({ language, theme }: IndexProps) => {
     if (theme === "light") {
       // Light mode: spline-viewer with undefined URL
       return (
-        <spline-viewer 
+        <spline-viewer
           url="undefined"
           style={{
             position: "fixed",
@@ -76,7 +77,7 @@ const Index = ({ language, theme }: IndexProps) => {
     <div className="min-h-screen">
       {/* Conditional Spline Viewer based on theme */}
       {renderSplineViewer()}
-      
+
       {/* Main content with higher z-index */}
       <div style={{ position: "relative", zIndex: 2 }}>
         <HeroSection language={language} />
